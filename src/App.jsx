@@ -4,13 +4,19 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [step] = useState(0)
+  const [step , setStep] = useState(0)
+
+  function addSteps(){
+    if(step < tutorialData.length - 1){
+      setStep(step + 1)
+    }
+  }
 
   
 
   return (
     <>
-      <Card  step = { step } data = { tutorialData [step]}/>
+      <Card  step = { step } handleStep = {addSteps} data = { tutorialData [step]}/>
     </>
   )
 }
