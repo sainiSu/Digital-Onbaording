@@ -7,13 +7,11 @@ import "./components/Card.css";
 function App() {
   const [step, setStep] = useState(0);
 
-  function addSteps() {
-    if (step < tutorialData.length - 1) {
-      setStep(step + 1);
-    }
-  }
+  const handleStep = (newStep) => {
+    setStep(newStep);
+  };
 
-  const prevStep = () => {
+  const handlePrevStep = () => {
     if (step > 0) {
       setStep(step - 1);
     }
@@ -22,10 +20,7 @@ function App() {
   return (
     <>
       <Card
-        step={step}
-        handleStep={addSteps}
-        handlePrevStep={prevStep}
-        data={tutorialData[step]}
+        step={step} handleStep={handleStep} handlePrevStep={handlePrevStep} data={tutorialData}
       ></Card>
     </>
   );
