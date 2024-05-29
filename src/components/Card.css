@@ -84,9 +84,14 @@ img.card-image{
 }
 /* Add styles for the active bullet points */
 
+.indicator .bullet-btn button.active {
+    background-color: grey;
+    color: white; 
+  }
+
 .indicator button {
-  background: none;
-  border: none;
+  background: gainsboro;
+  border: solid;
   cursor: pointer;
   font-size: 1em;
 }
