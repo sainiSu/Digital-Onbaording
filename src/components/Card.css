@@ -9,6 +9,23 @@
     width: 100%;
 }
 
+.card-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card {
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the transform property */
+  }
+  
+  .card.slide-out-left {
+    transform: translateX(-100%); /* Slide out to the left */
+  }
+  
+  .card.slide-in-right {
+    transform: translateX(0); /* Slide in from the right */
+  }
+  
 img.card-image{
     border-radius: 50px 50px 0px 0px;
 }
@@ -66,10 +83,18 @@ img.card-image{
     margin-right: 10px;
 }
 /* Add styles for the active bullet points */
-.indicator .bullet-btn button.active {
-    background-color: green;
-    color: white; 
-  }
+
+.indicator button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.indicator button.active {
+  color: red;
+
+}
   
 
 
